@@ -1,0 +1,25 @@
+# secrets: never commit keys, passwords or connection strings
+.env
+*.env
+.streamlit/secrets.toml
+secrets.*
+# source data
+data/source_crm/
+data/source_erp/
+*.csv
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Power BI: the .pbix holds the questions people typed. Publish screenshots, not the file.
+*.pbix
+*.pbit
+*.log
+# Tableau: the workbook and the exported CSV files can contain what people typed
+tableau_data/
+*.twb
+*.twbx
+*.hyper
+# saved test outputs
+test_output_*.txt
