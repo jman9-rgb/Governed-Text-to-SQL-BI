@@ -1,0 +1,47 @@
+name: checks
+
+# Runs on every push and pull request. It needs no database, no API key and no data files.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Python files compile
+        run: python -m py_compile app/genbi_app.py app/genbi_eval.py app/genbi_validator.py
+
+      - name: Validator self-test (rules V01-V11)
+        working-directory: app
+        run: python genbi_validator.py
+
+      - name: Scorer self-test
+        working-directory: app
+        run: python genbi_eval.py --selftest
+
+      - name: SQL static check (object order, quotes, BEGIN/END, USE lines)
+        run: python tools/check_sql.py .
+
+      - name: No secrets and no private files in the repository
+        run: |
+          set -u
+          fail=0
+          # Gemini-style keys and hard-coded api_key strings (the workflow file itself is excluded)
+          if git grep -nE "AIza[0-9A-Za-z_-]{30,}|api_key[[:space:]]*=[[:space:]]*['\"][A-Za-z0-9_-]{12,}" -- . ':!.github/workflows/checks.yml'; then
+            echo "A key-like string is committed. Remove it and replace the key."; fail=1
+          fi
+          # files that must never be committed
+          if git ls-files | grep -iE '\.(pbix|twbx?|csv|env)$|(^|/)\.env'; then
+            echo "A data, dashboard or .env file is committed. Remove it and keep it in .gitignore."; fail=1
+          fi
+          exit $fail
