@@ -77,17 +77,22 @@ Step 01 drops an existing `DataWarehouse` database. Do not run it on data you wa
 
 ## 7. Results
 
-| Run | Label | Score |
-|---|---|---|
-| 2 | baseline | 82.61% |
-| 3 | baseline-v2 | 86.96% |
-| 4 | after improvement cycle 1 | 93.48% |
-| 6 | final, fresh answers | **95.65%** (44 of 46) |
+| Run | Label | Questions | Score | Answers |
+|---|---|---|---|---|
+| 2 | baseline | 46 | 82.61% (38 of 46) | fresh |
+| 3 | baseline-v2 | 46 | 86.96% (40 of 46) | 38 of 46 from the cache |
+| 4 | after improvement cycle 1 | 46 | 93.48% (43 of 46) | fresh |
+| 6 | final | 46 | **95.65%** (44 of 46) | fresh |
+| 7 | recheck-22 (customer agent only) | 16 | 100% (16 of 16) | fresh, partial run |
 
 - Run-to-run variation is about two questions, so read the result as roughly 93-96%.
-- Run 5 (100%) is excluded: 29 of its 46 answers came from the cache.
+- Run 5 (100%) is excluded: 29 of its 46 answers came from the cache. Run 3 is partly cached (38 of 46), so the fresh results are runs 2, 4 and 6.
 - Run 7 re-tested only the customer agent after the last fix: 16 of 16. It is not a full run.
 - Known limitation: #12 ("What is the sales growth?") sometimes leaves out a column.
+
+`pass_pct` is the score: right kind of reply (Answer and Answer-with-assumption count as the same kind)
+and the same result as the answer key. `behavior_ok_pct` is stricter: it counts only an exact match of
+the behavior label, so it is lower.
 
 ## 8. Improvement loop
 
