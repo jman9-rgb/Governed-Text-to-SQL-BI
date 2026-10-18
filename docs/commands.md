@@ -121,6 +121,8 @@ If it stops, fix the cause and continue from that step:
 .\run_all.ps1 -Server "<server>" -From 10 -Tests    # continue from 10, with tests
 ```
 
+**Certificate error?** `run_all.ps1` passes `-C` to `sqlcmd`. `-C` trusts the server certificate. A local SQL Server needs it.
+
 ### 2.2 One file at a time
 
 **When:** to run a single step by hand. `-I` is needed so quoted identifiers are on.
