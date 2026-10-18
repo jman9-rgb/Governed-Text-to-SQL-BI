@@ -1,6 +1,7 @@
 # Case study: making an AI SQL assistant trustworthy
 
 **Role:** data analyst, sole builder. **Stack:** SQL Server, Python (Streamlit), Google Gemini free tier, Power BI.
+**Data:** the bronze, silver and gold warehouse follows the free SQL course by Data With Baraa; the semantic layer, agents, safety layers, evaluation, tests and app are my own work. See the README for the credit and terms.
 
 ## The problem
 An AI that writes SQL is easy to demo and hard to trust. It can invent columns, add up the wrong grain, merge different customers
