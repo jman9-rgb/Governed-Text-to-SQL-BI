@@ -59,7 +59,7 @@ Every command is in [docs/commands.md](docs/commands.md). In short:
 1. `pip install -r requirements.txt`
 2. Set `GENBI_CONN` and `GEMINI_API_KEY` as environment variables (never put them in code).
 3. Edit the data folder path in `sql/build/03_load_bronze.sql`.
-4. Run the files in `sql/build/` in number order (`.\run_all.ps1 -Server "<server>"` does it for you).
+4. Run the files in `sql/build/` in number order (`.\run_all.ps1 -Server "<server>"` does it for you).   If `sqlcmd` reports a certificate error on a local server, `run_all.ps1` already passes `-C` (trust the server certificate).
 5. `cd app` then `streamlit run genbi_app.py`
 
 Step 01 drops an existing `DataWarehouse` database. Do not run it on data you want to keep.
@@ -82,14 +82,14 @@ Step 01 drops an existing `DataWarehouse` database. Do not run it on data you wa
 |---|---|---|---|---|
 | 2 | baseline | 46 | 82.61% (38 of 46) | fresh |
 | 3 | baseline-v2 | 46 | 86.96% (40 of 46) | 38 of 46 from the cache |
-| 4 | after improvement cycle 1 | 46 | 93.48% (43 of 46) | fresh |
+| 4 | after-phase13-v2 (improvement cycle 1) | 46 | 93.48% (43 of 46) | fresh |
 | 6 | final | 46 | **95.65%** (44 of 46) | fresh |
 | 7 | recheck-22 (customer agent only) | 16 | 100% (16 of 16) | fresh, partial run |
 
 - Run-to-run variation is about two questions, so read the result as roughly 93-96%.
 - Run 5 (100%) is excluded: 29 of its 46 answers came from the cache. Run 3 is partly cached (38 of 46), so the fresh results are runs 2, 4 and 6.
 - Run 7 re-tested only the customer agent after the last fix: 16 of 16. It is not a full run.
-- Known limitation: #12 ("What is the sales growth?") sometimes leaves out a column.
+- Known failures in the final run: #12 ("What is the sales growth?") sometimes leaves out a column, and #22 ("top 10 customers by sales") returned a wrong result. #22 was fixed and re-checked in run 7.
 
 `pass_pct` is the score: right kind of reply (Answer and Answer-with-assumption count as the same kind)
 and the same result as the answer key. `behavior_ok_pct` is stricter: it counts only an exact match of
@@ -126,7 +126,7 @@ the behavior label, so it is lower.
 <summary>Power BI monitoring</summary>
 
 ![Power BI health](docs/screenshots/powerbi-health.png)
-![Power BI evaluation](docs/screenshots/powerbi-evaluation.png)
+![Power BI evaluation](docs/screenshots/powerbi-evaluation.jpeg)
 
 </details>
 
