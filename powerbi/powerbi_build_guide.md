@@ -219,9 +219,17 @@ not the data: the SQL checks T12.2 - T12.5 already proved the views are right.
 
 ## 6. Publishing and privacy
 
-- Save as `GenBI_Monitoring.pbix`. Add it to the repo under `/powerbi` **only if** it contains no real
-  user questions. The `Questions`, `Backlog` and `FeedbackQueue` tables contain the text people typed.
-  For a public repo, remove those columns or delete those tables and refresh, and keep screenshots clean.
-- Take screenshots of pages 1-4 for the README.
-- Power BI Service (online sharing) needs a work account and a gateway to the local SQL Server.
-  It is not needed for the portfolio; Desktop screenshots and the .pbix are enough.
+**Do not commit the `.pbix` file.** It stores the data it loaded, including the questions people typed
+(the `Questions`, `Backlog` and `FeedbackQueue` tables). The repo's `.gitignore` blocks `*.pbix` and `*.pbit`,
+and the automatic checks fail if one is tracked.
+
+**What to share instead**
+- Take screenshots of pages 1-4 and save them in `docs/screenshots/`. Link them in the README.
+- Before taking a screenshot, check that no real user question, name or path is visible on screen.
+  If a visual shows question text, use test questions, or hide that column.
+- Keep the `.pbix` on your own computer. If you share it privately, remove the `Questions`, `Backlog` and
+  `FeedbackQueue` tables or their text columns first, then refresh.
+
+**Sharing the dashboard online**
+- Power BI Service (online sharing) needs a work or school account and a data gateway to a local SQL Server.
+- It is optional. Screenshots in the README show the dashboard without any of that.
