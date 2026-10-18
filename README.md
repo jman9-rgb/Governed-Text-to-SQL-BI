@@ -4,6 +4,7 @@
 
 Ask a business question in plain English and get a checked SQL answer, then measure how often the AI is right.
 Built with SQL Server, Python (Streamlit), Google Gemini (free tier) and Power BI.
+See the [screenshots](#screenshots) of the app, the evaluation, Power BI and the tests.
 
 ## 1. What it is
 
@@ -93,6 +94,51 @@ Step 01 drops an existing `DataWarehouse` database. Do not run it on data you wa
 `pass_pct` is the score: right kind of reply (Answer and Answer-with-assumption count as the same kind)
 and the same result as the answer key. `behavior_ok_pct` is stricter: it counts only an exact match of
 the behavior label, so it is lower.
+
+## Screenshots
+
+**The app answering a question** (checked, run on live data, SQL shown):
+
+![Answer](docs/screenshots/app-answer.png)
+
+<details>
+<summary>More app screenshots: clarify, decline, redirect, assumptions, product ranking</summary>
+
+| Clarify | Decline | Redirect |
+|---|---|---|
+| ![Clarify](docs/screenshots/app-clarify.png) | ![Decline](docs/screenshots/app-decline.png) | ![Redirect](docs/screenshots/app-redirect.png) |
+
+| Last month (assumption) | Best products |
+|---|---|
+| ![Assumption](docs/screenshots/app-assumption.png) | ![Product](docs/screenshots/app-product.png) |
+
+</details>
+
+<details>
+<summary>Evaluation: results and which change fixed which question</summary>
+
+![Evaluation summary](docs/screenshots/eval-summary.png)
+![Change effect](docs/screenshots/change-effect.png)
+
+</details>
+
+<details>
+<summary>Power BI monitoring</summary>
+
+![Power BI health](docs/screenshots/powerbi-health.png)
+![Power BI evaluation](docs/screenshots/powerbi-evaluation.png)
+
+</details>
+
+<details>
+<summary>Tests and continuous checks</summary>
+
+The columns are tests, passed, failed and diffs. `failed` is 0 in every file. The few `diffs` (t12, t14) are checks that were true right after their own build step and were changed later on purpose. They are not errors.
+
+![Tests](docs/screenshots/tests-pass.png)
+![GitHub checks](docs/screenshots/github-checks.png)
+
+</details>
 
 ## 8. Improvement loop
 
