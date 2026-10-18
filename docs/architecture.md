@@ -23,7 +23,7 @@ Every name below is a real object in `sql/build/` or `app/`.
 ### Data flow
 
 ```mermaid
-flowchart TD
+flowchart LR
     CSV["Source CSV files"] -->|03 load| B["Bronze"]
     B -->|04, 05 clean| S["Silver"]
     S -->|06 model| G["Gold tables"]
@@ -34,7 +34,7 @@ flowchart TD
 ### Question flow
 
 ```mermaid
-flowchart TD
+flowchart LR
     Q["Question"] --> A["Pick agent"]
     A --> C{"Cached?"}
     C -->|yes| R["Answer"]
@@ -51,7 +51,7 @@ flowchart TD
 ### Improvement loop
 
 ```mermaid
-flowchart TD
+flowchart LR
     G["46 golden questions"] --> E["Evaluation run"]
     E --> F["Failures"]
     F --> X["Fix data layer or prompt"]
