@@ -1,8 +1,6 @@
 # GenBI: governed natural-language BI on SQL Server
 
-<!-- When the repo is public, replace this comment with the badge line:
-![checks](https://github.com/<your-user>/<repo>/actions/workflows/checks.yml/badge.svg)
--->
+![checks](https://github.com/jman9-rgb/Governed-Text-to-SQL-BI/actions/workflows/checks.yml/badge.svg)
 
 Ask a business question in plain English and get a checked SQL answer, then measure how often the AI is right.
 Built with SQL Server, Python (Streamlit), Google Gemini (free tier) and Power BI.
