@@ -1,5 +1,9 @@
 # GenBI: governed natural-language BI on SQL Server
 
+<!-- When the repo is public, replace this comment with the badge line:
+![checks](https://github.com/<your-user>/<repo>/actions/workflows/checks.yml/badge.svg)
+-->
+
 Ask a business question in plain English and get a checked SQL answer, then measure how often the AI is right.
 Built with SQL Server, Python (Streamlit), Google Gemini (free tier) and Power BI.
 
@@ -100,7 +104,17 @@ Four pages: health, usage and cost, quality and safety, evaluation and improveme
 
 ## 10. Data
 
-Source files: CRM (`cust_info`, `prd_info`, `sales_details`) and ERP (`LOC_A101`, `CUST_AZ12`, `PX_CAT_G1V2`). <add the data source and credit here>
+Source files: CRM (`cust_info`, `prd_info`, `sales_details`) and ERP (`LOC_A101`, `CUST_AZ12`, `PX_CAT_G1V2`).
+
+The data comes from the free "SQL Ultimate Course" materials by **Data With Baraa** (YouTube):
+https://academy.datawithbaraa.com/l/digital_download/930511/sql-course-materials
+
+The creator's terms: the materials are for learning and personal use only; commercial use, redistribution
+or resale of the files is not permitted; public work should credit "Data With Baraa". For that reason the data
+files are **not included** in this repo. Download them from the link above and see [data/README.md](data/README.md).
+
+Credit: Data With Baraa. The bronze, silver and gold warehouse follows his course. The semantic layer, governance
+tables, agents, safety layers, evaluation, tests and the Streamlit app are my own additions.
 
 ## 11. Case study
 
