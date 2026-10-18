@@ -1,98 +1,182 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1290 1470" width="1290" height="1470" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6770"/></marker></defs>
-<rect width="1000" height="720" fill="#ffffff"/>
-<text x="500" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2a33">GenBI architecture: from a question to a measured answer</text>
-<rect x="20" y="50" width="270" height="540" rx="12" fill="#2b6cb0" fill-opacity="0.10" stroke="#2b6cb0" stroke-width="1.5"/>
-<text x="155.0" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#2b6cb0">1  GOVERNED KNOWLEDGE</text>
-<rect x="40" y="90" width="230" height="60" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.2"/>
-<text x="155.0" y="117.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Business context</text>
-<text x="155.0" y="134.0" text-anchor="middle" font-size="11" fill="#5b6770">company, time rules, limits</text>
-<rect x="40" y="170" width="230" height="60" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.2"/>
-<text x="155.0" y="197.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Metric catalog</text>
-<text x="155.0" y="214.0" text-anchor="middle" font-size="11" fill="#5b6770">columns + trusted KPIs</text>
-<rect x="40" y="250" width="230" height="60" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.2"/>
-<text x="155.0" y="277.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Business glossary</text>
-<text x="155.0" y="294.0" text-anchor="middle" font-size="11" fill="#5b6770">words -> metrics, rules</text>
-<rect x="40" y="330" width="230" height="60" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.2"/>
-<text x="155.0" y="357.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Agent scope</text>
-<text x="155.0" y="374.0" text-anchor="middle" font-size="11" fill="#5b6770">3 agents, own views, own DB user</text>
-<rect x="40" y="420" width="230" height="60" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.2"/>
-<text x="155.0" y="447.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Semantic views</text>
-<text x="155.0" y="464.0" text-anchor="middle" font-size="11" fill="#5b6770">vw_sales, vw_monthly_sales, ...</text>
-<rect x="40" y="500" width="230" height="60" rx="8" fill="#ffffff" stroke="#2b6cb0" stroke-width="1.2"/>
-<text x="155.0" y="527.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Warehouse</text>
-<text x="155.0" y="544.0" text-anchor="middle" font-size="11" fill="#5b6770">bronze > silver > gold (tables)</text>
-<line x1="155" y1="480" x2="155" y2="500" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<rect x="320" y="50" width="360" height="540" rx="12" fill="#2f855a" fill-opacity="0.10" stroke="#2f855a" stroke-width="1.5"/>
-<text x="500.0" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#2f855a">2  ASK AND ANSWER</text>
-<rect x="345" y="90" width="310" height="50" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.2"/>
-<text x="500.0" y="112.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Business question</text>
-<text x="500.0" y="129.0" text-anchor="middle" font-size="11" fill="#5b6770">sales | customer | product agent</text>
-<rect x="345" y="160" width="310" height="50" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.2"/>
-<text x="500.0" y="182.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Prompt builder</text>
-<text x="500.0" y="199.0" text-anchor="middle" font-size="11" fill="#5b6770">only that agent's context, from SQL</text>
-<rect x="345" y="230" width="310" height="50" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.2"/>
-<text x="500.0" y="252.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Gemini (free tier)</text>
-<text x="500.0" y="269.0" text-anchor="middle" font-size="11" fill="#5b6770">returns JSON: behavior + one SELECT</text>
-<rect x="345" y="300" width="310" height="50" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.2"/>
-<text x="500.0" y="322.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Safety 1: text validator</text>
-<text x="500.0" y="339.0" text-anchor="middle" font-size="11" fill="#5b6770">rules V01-V11 (app/genbi_validator.py)</text>
-<rect x="345" y="370" width="310" height="50" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.2"/>
-<text x="500.0" y="392.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Safety 2: dry run</text>
-<text x="500.0" y="409.0" text-anchor="middle" font-size="11" fill="#5b6770">genbi.sp_dry_run: compiles for this agent?</text>
-<rect x="345" y="440" width="310" height="50" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.2"/>
-<text x="500.0" y="462.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Safety 3: database permissions</text>
-<text x="500.0" y="479.0" text-anchor="middle" font-size="11" fill="#5b6770">runs as agent user, other objects = error 229</text>
-<rect x="345" y="510" width="310" height="50" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="1.2"/>
-<text x="500.0" y="532.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Answer</text>
-<text x="500.0" y="549.0" text-anchor="middle" font-size="11" fill="#5b6770">Answer | Assumption | Clarify | Decline | Redirect</text>
-<line x1="500.0" y1="140" x2="500.0" y2="160" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="500.0" y1="210" x2="500.0" y2="230" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="500.0" y1="280" x2="500.0" y2="300" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="500.0" y1="350" x2="500.0" y2="370" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="500.0" y1="420" x2="500.0" y2="440" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="500.0" y1="490" x2="500.0" y2="510" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<text x="500" y="577" text-anchor="middle" font-size="11" fill="#5b6770">cache hit skips Gemini; daily budget stops runaway cost</text>
-<rect x="710" y="50" width="270" height="540" rx="12" fill="#c05621" fill-opacity="0.10" stroke="#c05621" stroke-width="1.5"/>
-<text x="845.0" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#c05621">3  OBSERVE</text>
-<rect x="730" y="90" width="230" height="60" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.2"/>
-<text x="845.0" y="117.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Query log</text>
-<text x="845.0" y="134.0" text-anchor="middle" font-size="11" fill="#5b6770">every question, outcome, timings</text>
-<rect x="730" y="170" width="230" height="60" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.2"/>
-<text x="845.0" y="197.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Feedback</text>
-<text x="845.0" y="214.0" text-anchor="middle" font-size="11" fill="#5b6770">thumbs up/down + reason, review queue</text>
-<rect x="730" y="250" width="230" height="60" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.2"/>
-<text x="845.0" y="277.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Cost guardrails</text>
-<text x="845.0" y="294.0" text-anchor="middle" font-size="11" fill="#5b6770">daily call limit, cache, usage ledger</text>
-<rect x="730" y="330" width="230" height="60" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.2"/>
-<text x="845.0" y="357.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Monitoring views</text>
-<text x="845.0" y="374.0" text-anchor="middle" font-size="11" fill="#5b6770">8 views, read-only role</text>
-<rect x="730" y="410" width="230" height="60" rx="8" fill="#ffffff" stroke="#c05621" stroke-width="1.2"/>
-<text x="845.0" y="437.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Power BI dashboard</text>
-<text x="845.0" y="454.0" text-anchor="middle" font-size="11" fill="#5b6770">health | cost | quality | evaluation</text>
-<line x1="845" y1="150" x2="845" y2="170" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="845" y1="230" x2="845" y2="250" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="845" y1="310" x2="845" y2="330" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="845" y1="390" x2="845" y2="410" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<polyline points="270,200 305,200 305,185 345,185" fill="none" stroke="#5b6770" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ar)"/>
-<polyline points="655,535 695,535 695,120 730,120" fill="none" stroke="#5b6770" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ar)"/>
-<line x1="655" y1="255" x2="730" y2="280" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)" stroke-dasharray="5 4"/>
-<rect x="20" y="610" width="960" height="96" rx="12" fill="#6b46c1" fill-opacity="0.10" stroke="#6b46c1" stroke-width="1.5"/>
-<text x="500.0" y="634" text-anchor="middle" font-size="14" font-weight="700" fill="#6b46c1">4  IMPROVE (measure > diagnose > fix > log > measure again)</text>
-<rect x="40" y="640" width="226" height="52" rx="8" fill="#ffffff" stroke="#6b46c1" stroke-width="1.2"/>
-<text x="153.0" y="663.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">46 golden questions</text>
-<text x="153.0" y="680.0" text-anchor="middle" font-size="11" fill="#5b6770">answer key from trusted SQL</text>
-<rect x="300" y="640" width="196" height="52" rx="8" fill="#ffffff" stroke="#6b46c1" stroke-width="1.2"/>
-<text x="398.0" y="663.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Evaluation run</text>
-<text x="398.0" y="680.0" text-anchor="middle" font-size="11" fill="#5b6770">behavior + result vs key</text>
-<rect x="530" y="640" width="196" height="52" rx="8" fill="#ffffff" stroke="#6b46c1" stroke-width="1.2"/>
-<text x="628.0" y="663.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Failure analysis</text>
-<text x="628.0" y="680.0" text-anchor="middle" font-size="11" fill="#5b6770">cause: data, prompt or scorer</text>
-<rect x="760" y="640" width="200" height="52" rx="8" fill="#ffffff" stroke="#6b46c1" stroke-width="1.2"/>
-<text x="860.0" y="663.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2a33">Change log</text>
-<text x="860.0" y="680.0" text-anchor="middle" font-size="11" fill="#5b6770">what changed, why, which questions</text>
-<line x1="266" y1="666" x2="300" y2="666" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="496" y1="666" x2="530" y2="666" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<line x1="726" y1="666" x2="760" y2="666" stroke="#5b6770" stroke-width="1.6" marker-end="url(#ar)"/>
-<text x="500" y="718" text-anchor="middle" font-size="10" fill="#8a949c">Fixes go back into zone 1 (metric catalog, glossary, catalog rules) or the prompt rules, then the evaluation runs again.</text>
+<rect width="1290" height="1470" fill="#ffffff"/>
+<text x="645" y="38" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2a33">GenBI architecture</text>
+<text x="645" y="64" text-anchor="middle" font-size="15" fill="#5b6770">From raw files to a question answered, checked, logged and measured. Read top to bottom.</text>
+<rect x="30" y="90" width="1170" height="190" rx="16" fill="#2b6cb0" fill-opacity="0.08" stroke="#2b6cb0" stroke-width="2"/>
+<circle cx="66" cy="124" r="17" fill="#2b6cb0"/>
+<text x="66" y="130" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">1</text>
+<text x="94" y="121" font-size="19" font-weight="700" fill="#2b6cb0">WAREHOUSE</text>
+<text x="94" y="141" font-size="13" fill="#5b6770">Built once with SQL (steps 01-08). The AI can read only the last box.</text>
+<rect x="60.0" y="172" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2b6cb0" stroke-width="2"/>
+<text x="152.6" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Source files</text>
+<text x="152.6" y="225" text-anchor="middle" font-size="13" fill="#5b6770">CRM and ERP CSVs</text>
+<rect x="291.2" y="172" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2b6cb0" stroke-width="2"/>
+<text x="383.79999999999995" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Bronze</text>
+<text x="383.79999999999995" y="225" text-anchor="middle" font-size="13" fill="#5b6770">raw copy, 6 tables</text>
+<rect x="522.4" y="172" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2b6cb0" stroke-width="2"/>
+<text x="615.0" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Silver</text>
+<text x="615.0" y="225" text-anchor="middle" font-size="13" fill="#5b6770">cleaned, 6 tables</text>
+<rect x="753.5999999999999" y="172" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2b6cb0" stroke-width="2"/>
+<text x="846.1999999999999" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Gold tables</text>
+<text x="846.1999999999999" y="216" text-anchor="middle" font-size="13" fill="#5b6770">fact + 2 dimensions,</text>
+<text x="846.1999999999999" y="233" text-anchor="middle" font-size="13" fill="#5b6770">indexed</text>
+<rect x="984.8" y="172" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2b6cb0" stroke-width="2"/>
+<text x="1077.3999999999999" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Semantic views</text>
+<text x="1077.3999999999999" y="216" text-anchor="middle" font-size="13" fill="#5b6770">5 views, business</text>
+<text x="1077.3999999999999" y="233" text-anchor="middle" font-size="13" fill="#5b6770">names, stated grain</text>
+<polyline points="249.2,215 287.2,215" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="480.4,215 518.4,215" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="711.5999999999999,215 749.5999999999999,215" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="942.8,215 980.8,215" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="30" y="340" width="1170" height="190" rx="16" fill="#6b46c1" fill-opacity="0.08" stroke="#6b46c1" stroke-width="2"/>
+<circle cx="66" cy="374" r="17" fill="#6b46c1"/>
+<text x="66" y="380" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">2</text>
+<text x="94" y="371" font-size="19" font-weight="700" fill="#6b46c1">GOVERNED KNOWLEDGE</text>
+<text x="94" y="391" font-size="13" fill="#5b6770">Kept in SQL tables, not in prompt text (steps 10-13, 24). One fix reaches every question.</text>
+<rect x="60.0" y="422" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="2"/>
+<text x="152.6" y="446" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Business context</text>
+<text x="152.6" y="466" text-anchor="middle" font-size="13" fill="#5b6770">company, time rules,</text>
+<text x="152.6" y="483" text-anchor="middle" font-size="13" fill="#5b6770">known limits</text>
+<rect x="291.2" y="422" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="2"/>
+<text x="383.79999999999995" y="446" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Metric catalog</text>
+<text x="383.79999999999995" y="466" text-anchor="middle" font-size="13" fill="#5b6770">every column + trusted</text>
+<text x="383.79999999999995" y="483" text-anchor="middle" font-size="13" fill="#5b6770">KPIs</text>
+<rect x="522.4" y="422" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="2"/>
+<text x="615.0" y="446" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Business glossary</text>
+<text x="615.0" y="466" text-anchor="middle" font-size="13" fill="#5b6770">words to metrics;</text>
+<text x="615.0" y="483" text-anchor="middle" font-size="13" fill="#5b6770">vague words must ask</text>
+<rect x="753.5999999999999" y="422" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="2"/>
+<text x="846.1999999999999" y="446" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Agents and scope</text>
+<text x="846.1999999999999" y="466" text-anchor="middle" font-size="13" fill="#5b6770">3 agents, own views,</text>
+<text x="846.1999999999999" y="483" text-anchor="middle" font-size="13" fill="#5b6770">own database user</text>
+<rect x="984.8" y="422" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#6b46c1" stroke-width="2"/>
+<text x="1077.3999999999999" y="446" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Prompt per agent</text>
+<text x="1077.3999999999999" y="466" text-anchor="middle" font-size="13" fill="#5b6770">vw_agent_prompt</text>
+<text x="1077.3999999999999" y="483" text-anchor="middle" font-size="13" fill="#5b6770">built from the tables</text>
+<polyline points="249.2,465 287.2,465" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="480.4,465 518.4,465" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="711.5999999999999,465 749.5999999999999,465" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="942.8,465 980.8,465" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="30" y="590" width="1170" height="330" rx="16" fill="#2f855a" fill-opacity="0.08" stroke="#2f855a" stroke-width="2"/>
+<circle cx="66" cy="624" r="17" fill="#2f855a"/>
+<text x="66" y="630" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">3</text>
+<text x="94" y="621" font-size="19" font-weight="700" fill="#2f855a">ASK AND ANSWER</text>
+<text x="94" y="641" font-size="13" fill="#5b6770">Python app + SQL step 16. Every answer must pass three safety layers.</text>
+<rect x="60.0" y="672" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="152.6" y="705" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Question</text>
+<text x="152.6" y="725" text-anchor="middle" font-size="13" fill="#5b6770">user picks an agent</text>
+<rect x="291.2" y="672" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="383.79999999999995" y="696" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Cache</text>
+<text x="383.79999999999995" y="716" text-anchor="middle" font-size="13" fill="#5b6770">same question,</text>
+<text x="383.79999999999995" y="733" text-anchor="middle" font-size="13" fill="#5b6770">no new AI call</text>
+<rect x="522.4" y="672" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="615.0" y="696" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Budget</text>
+<text x="615.0" y="716" text-anchor="middle" font-size="13" fill="#5b6770">daily call limit</text>
+<text x="615.0" y="733" text-anchor="middle" font-size="13" fill="#5b6770">stops runaway cost</text>
+<rect x="753.5999999999999" y="672" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="846.1999999999999" y="696" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Prompt</text>
+<text x="846.1999999999999" y="716" text-anchor="middle" font-size="13" fill="#5b6770">this agent's tables</text>
+<text x="846.1999999999999" y="733" text-anchor="middle" font-size="13" fill="#5b6770">and views only</text>
+<rect x="984.8" y="672" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="1077.3999999999999" y="696" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Gemini</text>
+<text x="1077.3999999999999" y="716" text-anchor="middle" font-size="13" fill="#5b6770">returns JSON: behavior</text>
+<text x="1077.3999999999999" y="733" text-anchor="middle" font-size="13" fill="#5b6770">+ one SELECT</text>
+<polyline points="249.2,715 287.2,715" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="480.4,715 518.4,715" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="711.5999999999999,715 749.5999999999999,715" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="942.8,715 980.8,715" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="1077.3999999999999,762 1077.3999999999999,792 152.6,792 152.6,798" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<text x="615" y="785" text-anchor="middle" font-size="13" fill="#5b6770">Only a reply with SQL goes on. Clarify, Decline and Redirect end here.</text>
+<rect x="60.0" y="802" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="152.6" y="826" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Safety 1: text rules</text>
+<text x="152.6" y="846" text-anchor="middle" font-size="13" fill="#5b6770">V01-V11: one SELECT,</text>
+<text x="152.6" y="863" text-anchor="middle" font-size="13" fill="#5b6770">no comments, own views</text>
+<rect x="291.2" y="802" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="383.79999999999995" y="826" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Safety 2: dry run</text>
+<text x="383.79999999999995" y="846" text-anchor="middle" font-size="13" fill="#5b6770">SQL Server compiles it</text>
+<text x="383.79999999999995" y="863" text-anchor="middle" font-size="13" fill="#5b6770">as that agent</text>
+<rect x="522.4" y="802" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="615.0" y="826" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Safety 3: permissions</text>
+<text x="615.0" y="846" text-anchor="middle" font-size="13" fill="#5b6770">runs as a user that can</text>
+<text x="615.0" y="863" text-anchor="middle" font-size="13" fill="#5b6770">read only its views</text>
+<rect x="753.5999999999999" y="802" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="846.1999999999999" y="826" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Answer</text>
+<text x="846.1999999999999" y="846" text-anchor="middle" font-size="13" fill="#5b6770">table, SQL and a</text>
+<text x="846.1999999999999" y="863" text-anchor="middle" font-size="13" fill="#5b6770">stated assumption</text>
+<rect x="984.8" y="802" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+<text x="1077.3999999999999" y="826" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Log and feedback</text>
+<text x="1077.3999999999999" y="846" text-anchor="middle" font-size="13" fill="#5b6770">every question, rule hit,</text>
+<text x="1077.3999999999999" y="863" text-anchor="middle" font-size="13" fill="#5b6770">cost and thumbs up/down</text>
+<polyline points="249.2,845 287.2,845" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="480.4,845 518.4,845" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="711.5999999999999,845 749.5999999999999,845" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="942.8,845 980.8,845" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="30" y="980" width="1170" height="190" rx="16" fill="#b7791f" fill-opacity="0.08" stroke="#b7791f" stroke-width="2"/>
+<circle cx="66" cy="1014" r="17" fill="#b7791f"/>
+<text x="66" y="1020" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">4</text>
+<text x="94" y="1011" font-size="19" font-weight="700" fill="#b7791f">OBSERVE</text>
+<text x="94" y="1031" font-size="13" fill="#5b6770">SQL steps 17-19 and 21. People and cost become data you can look at.</text>
+<rect x="60.0" y="1062" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#b7791f" stroke-width="2"/>
+<text x="152.6" y="1095" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Usage and cost</text>
+<text x="152.6" y="1115" text-anchor="middle" font-size="13" fill="#5b6770">calls, tokens, cache hits</text>
+<rect x="291.2" y="1062" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#b7791f" stroke-width="2"/>
+<text x="383.79999999999995" y="1086" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Query log</text>
+<text x="383.79999999999995" y="1106" text-anchor="middle" font-size="13" fill="#5b6770">outcome, timing,</text>
+<text x="383.79999999999995" y="1123" text-anchor="middle" font-size="13" fill="#5b6770">rule hits</text>
+<rect x="522.4" y="1062" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#b7791f" stroke-width="2"/>
+<text x="615.0" y="1086" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Feedback queue</text>
+<text x="615.0" y="1106" text-anchor="middle" font-size="13" fill="#5b6770">thumbs-down reviewed</text>
+<text x="615.0" y="1123" text-anchor="middle" font-size="13" fill="#5b6770">by a person</text>
+<rect x="753.5999999999999" y="1062" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#b7791f" stroke-width="2"/>
+<text x="846.1999999999999" y="1086" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Monitoring views</text>
+<text x="846.1999999999999" y="1106" text-anchor="middle" font-size="13" fill="#5b6770">8 read-only views,</text>
+<text x="846.1999999999999" y="1123" text-anchor="middle" font-size="13" fill="#5b6770">one role</text>
+<rect x="984.8" y="1062" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#b7791f" stroke-width="2"/>
+<text x="1077.3999999999999" y="1086" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Power BI</text>
+<text x="1077.3999999999999" y="1106" text-anchor="middle" font-size="13" fill="#5b6770">4 pages: health, cost,</text>
+<text x="1077.3999999999999" y="1123" text-anchor="middle" font-size="13" fill="#5b6770">quality, evaluation</text>
+<polyline points="249.2,1105 287.2,1105" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="480.4,1105 518.4,1105" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="711.5999999999999,1105 749.5999999999999,1105" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="942.8,1105 980.8,1105" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<rect x="30" y="1230" width="1170" height="190" rx="16" fill="#c05621" fill-opacity="0.08" stroke="#c05621" stroke-width="2"/>
+<circle cx="66" cy="1264" r="17" fill="#c05621"/>
+<text x="66" y="1270" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">5</text>
+<text x="94" y="1261" font-size="19" font-weight="700" fill="#c05621">EVALUATE AND IMPROVE</text>
+<text x="94" y="1281" font-size="13" fill="#5b6770">SQL steps 14, 15, 20, 22 and genbi_eval.py. Measure, fix, measure again.</text>
+<rect x="60.0" y="1312" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#c05621" stroke-width="2"/>
+<text x="152.6" y="1336" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">46 golden questions</text>
+<text x="152.6" y="1356" text-anchor="middle" font-size="13" fill="#5b6770">18 sales, 16 customer,</text>
+<text x="152.6" y="1373" text-anchor="middle" font-size="13" fill="#5b6770">12 product</text>
+<rect x="291.2" y="1312" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#c05621" stroke-width="2"/>
+<text x="383.79999999999995" y="1336" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Answer key</text>
+<text x="383.79999999999995" y="1356" text-anchor="middle" font-size="13" fill="#5b6770">trusted SQL and a</text>
+<text x="383.79999999999995" y="1373" text-anchor="middle" font-size="13" fill="#5b6770">stored result</text>
+<rect x="522.4" y="1312" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#c05621" stroke-width="2"/>
+<text x="615.0" y="1336" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Evaluation run</text>
+<text x="615.0" y="1356" text-anchor="middle" font-size="13" fill="#5b6770">pass = right behavior</text>
+<text x="615.0" y="1373" text-anchor="middle" font-size="13" fill="#5b6770">AND same result</text>
+<rect x="753.5999999999999" y="1312" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#c05621" stroke-width="2"/>
+<text x="846.1999999999999" y="1336" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Failures</text>
+<text x="846.1999999999999" y="1356" text-anchor="middle" font-size="13" fill="#5b6770">cause found:</text>
+<text x="846.1999999999999" y="1373" text-anchor="middle" font-size="13" fill="#5b6770">data or prompt</text>
+<rect x="984.8" y="1312" width="185.2" height="86" rx="10" fill="#ffffff" stroke="#c05621" stroke-width="2"/>
+<text x="1077.3999999999999" y="1336" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a33">Change log</text>
+<text x="1077.3999999999999" y="1356" text-anchor="middle" font-size="13" fill="#5b6770">each fix linked to</text>
+<text x="1077.3999999999999" y="1373" text-anchor="middle" font-size="13" fill="#5b6770">the questions it affects</text>
+<polyline points="249.2,1355 287.2,1355" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="480.4,1355 518.4,1355" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="711.5999999999999,1355 749.5999999999999,1355" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="942.8,1355 980.8,1355" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<polyline points="1077.3999999999999,280 1077.3999999999999,340" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<text x="1065.3999999999999" y="315" text-anchor="end" font-size="13" fill="#5b6770">the 5 views are what agents may read</text>
+<polyline points="1077.3999999999999,530 1077.3999999999999,590" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<text x="1065.3999999999999" y="565" text-anchor="end" font-size="13" fill="#5b6770">the prompt goes to Gemini</text>
+<polyline points="1077.3999999999999,920 1077.3999999999999,980" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<text x="1065.3999999999999" y="955" text-anchor="end" font-size="13" fill="#5b6770">every question is logged</text>
+<polyline points="1077.3999999999999,1170 1077.3999999999999,1230" fill="none" stroke="#5b6770" stroke-width="2.2" marker-end="url(#ar)"/>
+<text x="1065.3999999999999" y="1205" text-anchor="end" font-size="13" fill="#5b6770">failures show where to fix</text>
+<polyline points="1173.9999999999998,1355 1236,1355 1236,465 1175.9999999999998,465" fill="none" stroke="#c05621" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<text x="1258" y="785" text-anchor="middle" font-size="14" font-weight="700" fill="#c05621" transform="rotate(-90 1258 785)">fix definitions in the tables, then measure again</text>
 </svg>
