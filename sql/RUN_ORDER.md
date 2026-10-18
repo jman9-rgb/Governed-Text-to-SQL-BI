@@ -46,5 +46,6 @@ Rules of thumb
 How to read a test result
 - `PASS` the check holds. `FAIL` a RULE broke: fix the cause (the file name and test id tell you where). `DIFF` is not an error.
 - **RULE** must always pass. **SEED** is true right after that step; a later step may change it on purpose (for example the glossary grows in step 22). **DATA** depends on the files you loaded; a DIFF only means your data is different from the one in the case study.
+- Example: `t14` Q3 shows `DIFF` after step 15. That is expected, because the questions are approved by then. In the same way, `t12` shows a `DIFF` because the glossary grows in step 22.
 - A test file ends with an error message only when a RULE failed, so `run_all.ps1 -Tests` stops there.
 - Tests that insert rows (`test_agent`, `TEST`) delete them again at the end.
